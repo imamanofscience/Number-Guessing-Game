@@ -1,2 +1,24 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+import random
+
+
+
+def game():
+    first_num = int(input('input lower limit of range'))
+    second_num = int(input('input upper limit of range'))
+    the_answer = random.randint(first_num, second_num)
+    the_guess = 0
+    while True:
+        the_guess = int(input('Guess an integer'))
+        if the_guess < the_answer:
+            print('Guess higher.')
+        elif the_guess > the_answer:
+            print('Guess lower.')
+        elif the_guess == the_answer:
+            print('you got it')
+            break
+        
+        
+        
+game()
